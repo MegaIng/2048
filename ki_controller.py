@@ -54,7 +54,7 @@ class PredictController(BoardController):
             print("No moves found")
             return MoveDirection.UP
         else:
-            moves = [(self.count_average_points(board, m, 3), m) for m in pms]
+            moves = [(self.count_average_points(board, m, 2), m) for m in pms]
             print(moves)
             return max(moves, key=itemgetter(0))[1]
 
